@@ -18,6 +18,12 @@
     document.getElementById('lk-empty').hidden = false
   }
 
+  // Driver.cache.hostnames keys gebruiken de RAW hostname (incl. www.).
+  // Voor cache-lookup geven we de raw door; voor display strippen we www.
+  function stripWww(host) {
+    return host ? host.replace(/^www\./, '') : host
+  }
+
   function activeDomain() {
     return new Promise((resolve) => {
       // 1. Querystring (test-harness / standalone preview)
@@ -33,8 +39,7 @@
           try {
             const u = new URL(url)
             if (!/^https?:$/.test(u.protocol)) return resolve(null)
-            const host = u.hostname.replace(/^www\./, '')
-            resolve(host)
+            resolve(u.hostname)
           } catch (_e) {
             resolve(null)
           }
@@ -45,7 +50,7 @@
       // 3. Fallback (localhost dev)
       const host =
         location.hostname && location.hostname !== 'localhost'
-          ? location.hostname.replace(/^www\./, '')
+          ? location.hostname
           : null
       resolve(host)
     })
@@ -82,17 +87,28 @@
   }
 
   async function init() {
-    const domain = await activeDomain()
-    setLoading(domain)
-    wireInteractions(domain)
+    const rawDomain = await activeDomain()
+    const displayDomain = stripWww(rawDomain)
+    setLoading(displayDomain)
+    wireInteractions(displayDomain)
 
-    if (!domain) {
+    if (!rawDomain) {
       setNoData('Geen actieve tab')
       return
     }
 
     try {
-      const site = await window.lekkertjeFetch.getDataFor(domain)
+      // Eerste poging: raw hostname (matcht Driver.cache.hostnames key).
+      let site = await window.lekkertjeFetch.getDataFor(rawDomain)
+      // Fallback: als raw niet matcht, probeer zonder www. (en vice versa)
+      // — dekt redirects www↔root en cache die op andere variant staat.
+      if (!site || !(site.totaal_bevindingen > 0)) {
+        const alt = rawDomain.startsWith('www.')
+          ? rawDomain.slice(4)
+          : 'www.' + rawDomain
+        const altSite = await window.lekkertjeFetch.getDataFor(alt)
+        if (altSite && altSite.totaal_bevindingen > 0) site = altSite
+      }
       window.lekkertjeRender(site, document)
     } catch (err) {
       setNoData('Geen detecties')

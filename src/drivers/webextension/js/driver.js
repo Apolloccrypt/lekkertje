@@ -708,36 +708,26 @@ const Driver = {
   },
 
   /**
-   * Update the extension icon
-   * @param {String} url
-   * @param {Object} technologies
+   * Update the extension badge — Lekkertje toont alleen het aantal
+   * gedetecteerde vendors via setBadgeText. Het icoon zelf blijft de
+   * statische Lekkertje-spinnenweb (default_icon uit manifest); we
+   * roepen chrome.action.setIcon NIET meer aan, zodat we niet vastlopen
+   * op missende per-tech PNG-icons (Wappalyzer's images/icons/converted/
+   * pipeline). De `dynamicIcon`-optie wordt genegeerd.
    */
   async setIcon(url, technologies = []) {
     if (await Driver.isDisabledDomain(url)) {
       technologies = []
     }
 
-    const dynamicIcon = await getOption('dynamicIcon', false)
     const showCached = await getOption('showCached', true)
     const badge = await getOption('badge', true)
-
-    let icon = 'default.svg'
 
     const _technologies = technologies.filter(
       ({ slug, lastUrl }) =>
         slug !== 'cart-functionality' &&
         (showCached || isSimilarUrl(url, lastUrl))
     )
-
-    if (dynamicIcon) {
-      const pinnedCategory = parseInt(await getOption('pinnedCategory'), 10)
-
-      const pinned = _technologies.find(({ categories }) =>
-        categories.some(({ id }) => id === pinnedCategory)
-      )
-
-      ;({ icon } = pinned || _technologies[0] || { icon })
-    }
 
     if (!url) {
       return
@@ -761,20 +751,6 @@ const Driver = {
             badge && _technologies.length
               ? _technologies.length.toString()
               : '',
-        },
-        () => {}
-      )
-
-      chrome.action.setIcon(
-        {
-          tabId,
-          path: chrome.runtime.getURL(
-            `../images/icons/${
-              /\.svg$/i.test(icon)
-                ? `converted/${icon.replace(/\.svg$/, '.png')}`
-                : icon
-            }`
-          ),
         },
         () => {}
       )
