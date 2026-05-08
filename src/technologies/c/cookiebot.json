@@ -5,7 +5,8 @@
       "cloud_act": false,
       "jurisdiction": "EU",
       "note": "Cybot A/S, Denemarken; consent-tool zelf is meestal compliance-instrument.",
-      "severity_default": "let_op"
+      "severity_default": "let_op",
+      "what": "Cookie-toestemmings-banner"
     },
     "cats": [
       67

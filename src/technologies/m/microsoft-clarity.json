@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Sessie-replay/heatmap; scripts laden op MUID-cookie van Microsoft Ads.",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "Sessie-opname / heatmap"
     },
     "cats": [
       10

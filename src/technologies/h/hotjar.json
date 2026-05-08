@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Sinds 2023 onderdeel van Contentsquare; sessie-replay raakt sessie-inhoud.",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "Sessie-opname / heatmap"
     },
     "cats": [
       10

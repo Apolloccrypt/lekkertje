@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "EU",
       "note": "PL-bedrijf, public cloud op AWS / Google Cloud — CLOUD Act-bereik mogelijk.",
-      "severity_default": "ernstig"
+      "severity_default": "ernstig",
+      "what": "Bezoekers-statistieken"
     },
     "cats": [
       10

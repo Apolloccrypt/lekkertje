@@ -4,7 +4,7 @@
   "author": "Mick Beer",
   "homepage_url": "https://mijnoverheid.us/",
   "description": "Zie waar je data heen gaat \u2014 voor Nederlandse overheidssites en daarbuiten. Door mijnoverheid.us",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "manifest_version": 2,
   "icons": {
     "16": "images/icon_16.png",

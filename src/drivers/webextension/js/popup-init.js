@@ -10,12 +10,19 @@
   }
 
   function setNoData(message) {
-    const sev = document.getElementById('lk-severity')
-    sev.dataset.level = 'onbekend'
-    document.getElementById('lk-sev-label').textContent =
-      message || 'Geen data beschikbaar'
-    document.getElementById('lk-sev-count').textContent = ''
-    document.getElementById('lk-empty').hidden = false
+    const rating = document.getElementById('lk-rating')
+    if (rating) rating.dataset.level = 'onbekend'
+    const stars = document.getElementById('lk-stars')
+    if (stars) stars.textContent = '—'
+    const label = document.getElementById('lk-sev-label')
+    if (label) label.textContent = message || 'Geen data beschikbaar'
+    const count = document.getElementById('lk-sev-count')
+    if (count) count.textContent = ''
+    const empty = document.getElementById('lk-empty')
+    if (empty) {
+      empty.style.display = ''
+      empty.textContent = message || 'Geen data beschikbaar'
+    }
   }
 
   // Driver.cache.hostnames keys gebruiken de RAW hostname (incl. www.).
@@ -56,17 +63,21 @@
     })
   }
 
+  function wireToggle(buttonId, panelId) {
+    const btn = document.getElementById(buttonId)
+    const panel = document.getElementById(panelId)
+    if (!btn || !panel) return
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true'
+      btn.setAttribute('aria-expanded', String(!open))
+      btn.querySelector('.lk-chev').textContent = open ? '▸' : '▾'
+      panel.hidden = open
+    })
+  }
+
   function wireInteractions(domain) {
-    const toggle = document.getElementById('lk-toggle')
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        const list = document.getElementById('lk-vendor-list')
-        const open = toggle.getAttribute('aria-expanded') === 'true'
-        toggle.setAttribute('aria-expanded', String(!open))
-        toggle.querySelector('.lk-chev').textContent = open ? '▸' : '▾'
-        list.hidden = open
-      })
-    }
+    wireToggle('lk-toggle', 'lk-vendor-list')
+    wireToggle('lk-legend-toggle', 'lk-legend')
 
     const dossier = document.getElementById('lk-dossier')
     if (dossier) {

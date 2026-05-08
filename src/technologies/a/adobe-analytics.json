@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Adobe Experience Cloud (incl. Audience Manager / Target).",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "Bezoekers-statistieken"
     },
     "cats": [
       10

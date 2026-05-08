@@ -5,7 +5,8 @@
       "cloud_act": false,
       "jurisdiction": "EU",
       "note": "Open-source self-host (default veilig); cloud-tier kan US-cloud raken.",
-      "severity_default": "let_op"
+      "severity_default": "let_op",
+      "what": "Bezoekers-statistieken"
     },
     "cats": [
       10

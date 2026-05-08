@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Customer-experience suite (ForeSee); sessie- en interactie-data.",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "Customer-experience-suite"
     },
     "cats": [
       76

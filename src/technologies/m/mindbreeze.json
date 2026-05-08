@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "HQ Chicago + Linz; enterprise-search met query-logging.",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "Enterprise-zoekfunctie"
     },
     "cats": [
       29

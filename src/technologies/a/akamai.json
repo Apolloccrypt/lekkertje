@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "CDN/WAF (Bot Manager-cookies); zit in TLS-pad.",
-      "severity_default": "ernstig"
+      "severity_default": "ernstig",
+      "what": "CDN / netwerk-doorvoer"
     },
     "cats": [
       31

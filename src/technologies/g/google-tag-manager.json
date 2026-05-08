@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Loader-platform; ernst hangt af van geladen tags.",
-      "severity_default": "ernstig"
+      "severity_default": "ernstig",
+      "what": "Tag-loader (sluis voor andere trackers)"
     },
     "cats": [
       42

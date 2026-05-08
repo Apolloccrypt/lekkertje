@@ -16,26 +16,56 @@
     </div>
   </header>
 
-  <section class="lk-severity" id="lk-severity" data-level="onbekend">
-    <span class="lk-sev-label" id="lk-sev-label">Bezig met laden…</span>
-    <span class="lk-sev-count" id="lk-sev-count"></span>
+  <section class="lk-rating" id="lk-rating" data-level="onbekend">
+    <div class="lk-stars" id="lk-stars" aria-label="Privacy-rating">—</div>
+    <div class="lk-rating-meta">
+      <span class="lk-sev-label" id="lk-sev-label">Bezig met laden…</span>
+      <span class="lk-sev-count" id="lk-sev-count"></span>
+    </div>
   </section>
 
   <section class="lk-web-wrap">
-    <svg id="lk-web" width="350" height="280" viewBox="0 0 350 280" role="img" aria-label="Spinnenweb van vendor-koppelingen"></svg>
-    <div class="lk-empty" id="lk-empty" hidden>Geen tracker-koppelingen gevonden op deze pagina.</div>
+    <svg id="lk-web" width="350" height="140" viewBox="0 0 350 140" role="img" aria-label="Spinnenweb van vendor-koppelingen"></svg>
+    <div class="lk-empty" id="lk-empty" style="display:none">Geen trackers gedetecteerd op deze pagina.</div>
   </section>
 
   <section class="lk-vendors">
-    <button class="lk-toggle" id="lk-toggle" aria-expanded="false" aria-controls="lk-vendor-list">
-      <span class="lk-chev">▸</span> Vendor-lijst
+    <button class="lk-toggle" id="lk-toggle" aria-expanded="true" aria-controls="lk-vendor-list">
+      <span class="lk-chev">▾</span> Vendors op deze pagina
     </button>
-    <ul class="lk-vendor-list" id="lk-vendor-list" hidden></ul>
+    <ul class="lk-vendor-list" id="lk-vendor-list"></ul>
+  </section>
+
+  <section class="lk-legend-wrap">
+    <button class="lk-toggle lk-legend-toggle" id="lk-legend-toggle" aria-expanded="false" aria-controls="lk-legend">
+      <span class="lk-chev">▸</span> Wat betekenen de sterren?
+    </button>
+    <div class="lk-legend" id="lk-legend" hidden>
+      <div class="lk-legend-row" data-level="schoon">
+        <span class="lk-stars-static" data-rating="5"></span>
+        <span><strong>Schoon</strong> — geen trackers gedetecteerd.</span>
+      </div>
+      <div class="lk-legend-row" data-level="let_op">
+        <span class="lk-stars-static" data-rating="3"></span>
+        <span><strong>Let op</strong> — vendors aanwezig, maar EU-jurisdictie of geen CLOUD Act.</span>
+      </div>
+      <div class="lk-legend-row" data-level="ernstig">
+        <span class="lk-stars-static" data-rating="2"></span>
+        <span><strong>Ernstig</strong> — bekende US-vendors of EU-tools op US-cloud.</span>
+      </div>
+      <div class="lk-legend-row" data-level="kritiek">
+        <span class="lk-stars-static" data-rating="1"></span>
+        <span><strong>Kritiek</strong> — bewezen tracking, data-stroom naar US onder CLOUD Act.</span>
+      </div>
+      <p class="lk-legend-note">
+        🇺🇸 = US-jurisdictie. ⚠ = data valt onder de Amerikaanse CLOUD Act.
+      </p>
+    </div>
   </section>
 
   <footer class="lk-footer">
     <span class="lk-foot-brand">Lekkertje · live detectie</span>
-    <button class="lk-dossier" id="lk-dossier" type="button">Bekijk dossier op mijnoverheid.us →</button>
+    <button class="lk-dossier" id="lk-dossier" type="button">Bekijk dossier →</button>
   </footer>
 
   <script src="../js/modes.js"></script>

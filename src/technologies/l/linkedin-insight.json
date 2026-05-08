@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "B2B-tracking; profielmatching tegen LinkedIn-account.",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "B2B-retargeting"
     },
     "cats": [
       10,

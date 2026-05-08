@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Self-host mogelijk; SaaS-tier (sentry.io) is US.",
-      "severity_default": "ernstig"
+      "severity_default": "ernstig",
+      "what": "Crash-tracking voor ontwikkelaars"
     },
     "cats": [
       13

@@ -5,7 +5,8 @@
       "cloud_act": false,
       "jurisdiction": "EU",
       "note": "Onderzoeks-/feedbacktool; risico afhankelijk van data-velden in survey.",
-      "severity_default": "let_op"
+      "severity_default": "let_op",
+      "what": "Klantfeedback / vragenlijst"
     },
     "cats": [
       73

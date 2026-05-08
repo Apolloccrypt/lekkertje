@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Adtech-koppeling met Google Ads en DoubleClick; CLOUD Act van toepassing.",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "Bezoekers-statistieken"
     },
     "cats": [
       10

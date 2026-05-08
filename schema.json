@@ -22,14 +22,15 @@
           },
           "jurisdiction": {
             "type": "string",
-            "pattern": "^(US|EU|NL|UK|IL|ROW|MIXED)$"
+            "pattern": "^(US|EU|NL|UK|IL|ROW|MIXED|US\\+EU|US\\+IL|US\\+AT|EU\\+US-cloud)$"
           },
           "cloud_act": { "type": "boolean" },
           "severity_default": {
             "type": "string",
             "pattern": "^(kritiek|ernstig|let_op)$"
           },
-          "note": { "type": "string" }
+          "note": { "type": "string" },
+          "what": { "type": "string" }
         }
       },
       "description": {

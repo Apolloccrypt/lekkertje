@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "US-vendor (Atlanta); consent-tool zelf onder CLOUD Act.",
-      "severity_default": "ernstig"
+      "severity_default": "ernstig",
+      "what": "Cookie-toestemmings-banner"
     },
     "cats": [
       67

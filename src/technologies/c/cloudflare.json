@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "CDN/WAF/DNS; zit in TLS-pad — TLS-terminatie meestal in US.",
-      "severity_default": "ernstig"
+      "severity_default": "ernstig",
+      "what": "CDN / netwerk-doorvoer"
     },
     "cats": [
       31

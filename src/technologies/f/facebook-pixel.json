@@ -5,7 +5,8 @@
       "cloud_act": true,
       "jurisdiction": "US",
       "note": "Meta Pixel; gebundeld met Conversions API en advertentieprofielen.",
-      "severity_default": "kritiek"
+      "severity_default": "kritiek",
+      "what": "Conversie-tracking voor Meta"
     },
     "cats": [
       10,
