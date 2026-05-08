@@ -1,0 +1,27 @@
+{
+  "DoubleClick": {
+    "_lekkertje": {
+      "category": "advertising",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Google ad-exchange; cross-site profiling.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      36
+    ],
+    "cookies": {
+      "DSID": "",
+      "IDE": "",
+      "id": "",
+      "test_cookie": ""
+    },
+    "scriptSrc": [
+      "doubleclick\\.net",
+      "(googleads|stats)\\.g\\.doubleclick\\.net",
+      "static\\.doubleclick\\.net"
+    ],
+    "website": "https://marketingplatform.google.com/about/display-video-360/",
+    "xhr": "(googleads|stats|cm)\\.g\\.doubleclick\\.net"
+  }
+}

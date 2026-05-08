@@ -1,0 +1,34 @@
+{
+  "LinkedIn Insight Tag": {
+    "_lekkertje": {
+      "category": "advertising",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "B2B-tracking; profielmatching tegen LinkedIn-account.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      10,
+      36
+    ],
+    "cookies": {
+      "AnalyticsSyncHistory": "",
+      "UserMatchHistory": "",
+      "bcookie": "",
+      "bscookie": "",
+      "li_alerts": "",
+      "li_gc": "",
+      "lidc": ""
+    },
+    "js": {
+      "_linkedin_partner_id": "",
+      "lintrk": ""
+    },
+    "scriptSrc": [
+      "snap\\.licdn\\.com/li\\.lms-analytics/insight\\.min\\.js",
+      "platform\\.linkedin\\.com"
+    ],
+    "website": "https://business.linkedin.com/marketing-solutions/insight-tag",
+    "xhr": "(px\\.ads\\.linkedin\\.com|dc\\.ads\\.linkedin\\.com)/(collect|track)"
+  }
+}

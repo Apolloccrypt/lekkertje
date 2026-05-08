@@ -1,0 +1,34 @@
+{
+  "Google Analytics": {
+    "_lekkertje": {
+      "category": "analytics",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Adtech-koppeling met Google Ads en DoubleClick; CLOUD Act van toepassing.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "_ga": "",
+      "_ga_.*": "",
+      "_gac_.*": "",
+      "_gat": "",
+      "_gid": ""
+    },
+    "js": {
+      "GoogleAnalyticsObject": "",
+      "ga.q": "",
+      "gtag": ""
+    },
+    "scriptSrc": [
+      "google-analytics\\.com/(ga|analytics|gtag/js)",
+      "googletagmanager\\.com/gtag/js",
+      "region\\d+\\.google-analytics\\.com",
+      "region\\d+\\.analytics\\.google\\.com"
+    ],
+    "website": "https://analytics.google.com",
+    "xhr": "(google-analytics\\.com|analytics\\.google\\.com)/(g/collect|collect|j/collect)"
+  }
+}

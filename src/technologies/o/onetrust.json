@@ -1,0 +1,30 @@
+{
+  "OneTrust": {
+    "_lekkertje": {
+      "category": "consent-management",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "US-vendor (Atlanta); consent-tool zelf onder CLOUD Act.",
+      "severity_default": "ernstig"
+    },
+    "cats": [
+      67
+    ],
+    "cookies": {
+      "OptanonAlertBoxClosed": "",
+      "OptanonConsent": "",
+      "eupubconsent-v2": ""
+    },
+    "js": {
+      "OneTrust": "",
+      "OnetrustActiveGroups": "",
+      "Optanon": ""
+    },
+    "scriptSrc": [
+      "cdn\\.cookielaw\\.org",
+      "cdn-(apac|ukwest)\\.onetrust\\.com",
+      "onetrust\\.com/.*/otSDKStub\\.js"
+    ],
+    "website": "https://www.onetrust.com"
+  }
+}

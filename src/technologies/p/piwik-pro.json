@@ -1,0 +1,34 @@
+{
+  "Piwik PRO": {
+    "_lekkertje": {
+      "category": "analytics",
+      "cloud_act": true,
+      "jurisdiction": "EU",
+      "note": "PL-bedrijf, public cloud op AWS / Google Cloud — CLOUD Act-bereik mogelijk.",
+      "severity_default": "ernstig"
+    },
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "_pk_cvar.*": "",
+      "_pk_id.*": "",
+      "_pk_ref.*": "",
+      "_pk_ses.*": "",
+      "stg_last_interaction": "",
+      "stg_returning_visitor": "",
+      "stg_traffic_source_priority": ""
+    },
+    "js": {
+      "_paq": "",
+      "ppms": ""
+    },
+    "scriptSrc": [
+      "(\\w+)\\.piwik\\.pro/",
+      "(\\w+)\\.containers\\.piwik\\.pro/",
+      "piwik\\.pro/ppms\\.js"
+    ],
+    "website": "https://piwik.pro",
+    "xhr": "\\.piwik\\.pro/(ppms\\.php|ppms_t\\.gif)"
+  }
+}

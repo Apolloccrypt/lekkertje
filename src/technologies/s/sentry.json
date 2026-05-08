@@ -1,0 +1,24 @@
+{
+  "Sentry": {
+    "_lekkertje": {
+      "category": "error-tracking",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Self-host mogelijk; SaaS-tier (sentry.io) is US.",
+      "severity_default": "ernstig"
+    },
+    "cats": [
+      13
+    ],
+    "js": {
+      "Sentry": "",
+      "__SENTRY__": ""
+    },
+    "scriptSrc": [
+      "browser\\.sentry-cdn\\.com",
+      "js\\.sentry-cdn\\.com"
+    ],
+    "website": "https://sentry.io",
+    "xhr": "(o\\d+\\.ingest(\\.\\w+)?\\.sentry\\.io|sentry\\.[a-z0-9.\\-]+/api/\\d+/)"
+  }
+}

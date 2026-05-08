@@ -1,0 +1,25 @@
+{
+  "KCM Survey": {
+    "_lekkertje": {
+      "category": "survey",
+      "cloud_act": false,
+      "jurisdiction": "EU",
+      "note": "Onderzoeks-/feedbacktool; risico afhankelijk van data-velden in survey.",
+      "severity_default": "let_op"
+    },
+    "cats": [
+      73
+    ],
+    "js": {
+      "Enalyzer": "",
+      "KCM": ""
+    },
+    "scriptSrc": [
+      "surveys\\.enalyzer\\.com",
+      "kcm-survey",
+      "\\.enalyzer\\.com"
+    ],
+    "website": "https://www.enalyzer.com",
+    "xhr": "(surveys\\.enalyzer\\.com|\\.enalyzer\\.com/api)"
+  }
+}

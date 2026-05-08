@@ -1,0 +1,28 @@
+{
+  "Akamai": {
+    "_lekkertje": {
+      "category": "platform",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "CDN/WAF (Bot Manager-cookies); zit in TLS-pad.",
+      "severity_default": "ernstig"
+    },
+    "cats": [
+      31
+    ],
+    "cookies": {
+      "_abck": "",
+      "ak_bmsc": "",
+      "bm_mi": "",
+      "bm_sv": "",
+      "bm_sz": ""
+    },
+    "scriptSrc": [
+      "\\.akamaihd\\.net",
+      "\\.akamaized\\.net",
+      "\\.edgekey\\.net",
+      "\\.akamai\\.net"
+    ],
+    "website": "https://www.akamai.com"
+  }
+}

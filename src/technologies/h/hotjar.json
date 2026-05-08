@@ -1,0 +1,31 @@
+{
+  "Hotjar": {
+    "_lekkertje": {
+      "category": "analytics",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Sinds 2023 onderdeel van Contentsquare; sessie-replay raakt sessie-inhoud.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "_hjAbsoluteSessionInProgress": "",
+      "_hjFirstSeen": "",
+      "_hjIncludedInSessionSample.*": "",
+      "_hjSession.*": "",
+      "_hjSessionUser.*": ""
+    },
+    "js": {
+      "_hjSettings": "",
+      "hj": ""
+    },
+    "scriptSrc": [
+      "static\\.hotjar\\.com",
+      "script\\.hotjar\\.com"
+    ],
+    "website": "https://www.hotjar.com",
+    "xhr": "(in|vc|insights)\\.hotjar\\.com"
+  }
+}

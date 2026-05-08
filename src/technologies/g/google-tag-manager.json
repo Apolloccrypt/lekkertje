@@ -1,0 +1,24 @@
+{
+  "Google Tag Manager": {
+    "_lekkertje": {
+      "category": "platform",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Loader-platform; ernst hangt af van geladen tags.",
+      "severity_default": "ernstig"
+    },
+    "cats": [
+      42
+    ],
+    "js": {
+      "dataLayer": "",
+      "google_tag_manager": "",
+      "gtag": ""
+    },
+    "scriptSrc": [
+      "googletagmanager\\.com/gtm\\.js",
+      "googletagmanager\\.com/gtag/js"
+    ],
+    "website": "https://tagmanager.google.com"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Lekkertje</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body class="lk-popup">
+  <header class="lk-header">
+    <div class="lk-logo" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#cc0000" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="#cc0000"/><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" stroke="#cc0000" stroke-width="0.6" fill="none"/></svg>
+    </div>
+    <div class="lk-title">
+      <div class="lk-brand">Lekkertje</div>
+      <div class="lk-domain" id="lk-domain">—</div>
+    </div>
+  </header>
+
+  <section class="lk-severity" id="lk-severity" data-level="onbekend">
+    <span class="lk-sev-label" id="lk-sev-label">Bezig met laden…</span>
+    <span class="lk-sev-count" id="lk-sev-count"></span>
+  </section>
+
+  <section class="lk-web-wrap">
+    <svg id="lk-web" width="350" height="280" viewBox="0 0 350 280" role="img" aria-label="Spinnenweb van vendor-koppelingen"></svg>
+    <div class="lk-empty" id="lk-empty" hidden>Geen tracker-koppelingen gevonden op deze pagina.</div>
+  </section>
+
+  <section class="lk-vendors">
+    <button class="lk-toggle" id="lk-toggle" aria-expanded="false" aria-controls="lk-vendor-list">
+      <span class="lk-chev">▸</span> Vendor-lijst
+    </button>
+    <ul class="lk-vendor-list" id="lk-vendor-list" hidden></ul>
+  </section>
+
+  <footer class="lk-footer">
+    <span class="lk-foot-brand">Lekkertje · live detectie</span>
+    <button class="lk-dossier" id="lk-dossier" type="button">Bekijk dossier op mijnoverheid.us →</button>
+  </footer>
+
+  <script src="../js/modes.js"></script>
+  <script src="../js/mijnoverheid-fetch.js"></script>
+  <script src="../js/spinnenweb.js"></script>
+  <script src="../js/popup-init.js"></script>
+</body>
+</html>

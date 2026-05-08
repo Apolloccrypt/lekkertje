@@ -1,0 +1,25 @@
+{
+  "Mindbreeze": {
+    "_lekkertje": {
+      "category": "platform",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "HQ Chicago + Linz; enterprise-search met query-logging.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      29
+    ],
+    "js": {
+      "MES": "",
+      "Mindbreeze": ""
+    },
+    "scriptSrc": [
+      "mindbreeze\\.(com|net)",
+      "/mindbreeze/",
+      "apps\\.mindbreeze\\.com"
+    ],
+    "website": "https://www.mindbreeze.com",
+    "xhr": "mindbreeze\\.(com|net)/api"
+  }
+}

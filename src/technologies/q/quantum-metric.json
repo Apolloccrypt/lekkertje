@@ -1,0 +1,28 @@
+{
+  "Quantum Metric": {
+    "_lekkertje": {
+      "category": "analytics",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Real-time digital experience analytics; sessie-replay-class.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "QuantumMetricSessionID": "",
+      "QuantumMetricUserID": ""
+    },
+    "js": {
+      "QuantumMetricAPI": "",
+      "QuantumMetricOnload": ""
+    },
+    "scriptSrc": [
+      "cdn\\.quantummetric\\.com",
+      "quantummetric\\.com/qtm\\.js"
+    ],
+    "website": "https://www.quantummetric.com",
+    "xhr": "(\\.quantummetric\\.com|qtm-prod)"
+  }
+}

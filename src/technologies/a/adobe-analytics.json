@@ -1,0 +1,38 @@
+{
+  "Adobe Analytics": {
+    "_lekkertje": {
+      "category": "analytics",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Adobe Experience Cloud (incl. Audience Manager / Target).",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "AMCVS_.*": "",
+      "AMCV_.*": "",
+      "aam_uuid": "",
+      "demdex": "",
+      "dpm": "",
+      "mbox": "",
+      "s_cc": "",
+      "s_sq": ""
+    },
+    "js": {
+      "AppMeasurement": "",
+      "_satellite": "",
+      "s_account": ""
+    },
+    "scriptSrc": [
+      "omtrdc\\.net",
+      "demdex\\.net",
+      "(adobedc|adobedtm)\\.(com|net)",
+      "2o7\\.net",
+      "assets\\.adobedtm\\.com"
+    ],
+    "website": "https://business.adobe.com/products/analytics/adobe-analytics.html",
+    "xhr": "(omtrdc\\.net|demdex\\.net|data\\.adobedc\\.net)"
+  }
+}

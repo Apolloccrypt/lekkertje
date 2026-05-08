@@ -1,0 +1,32 @@
+{
+  "Microsoft Clarity": {
+    "_lekkertje": {
+      "category": "analytics",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Sessie-replay/heatmap; scripts laden op MUID-cookie van Microsoft Ads.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "ANONCHK": "",
+      "CLID": "",
+      "MUID": "",
+      "SM": "",
+      "_clck": "",
+      "_clsk": ""
+    },
+    "js": {
+      "Microsoft.Clarity": "",
+      "clarity": ""
+    },
+    "scriptSrc": [
+      "(www\\.)?clarity\\.ms/tag/",
+      "scripts\\.clarity\\.ms"
+    ],
+    "website": "https://clarity.microsoft.com",
+    "xhr": "([a-z0-9.\\-]+\\.)?clarity\\.ms/(collect|tag)"
+  }
+}

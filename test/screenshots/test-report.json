@@ -1,0 +1,161 @@
+[
+  {
+    "site": "https://werkenbijdefensie.nl",
+    "expected": "rood",
+    "ok": true,
+    "cacheKeys": [
+      "werkenbijdefensie.nl",
+      "www.wappalyzer.com"
+    ],
+    "cacheEntry": {
+      "hits": 1,
+      "dets": 7
+    },
+    "allCacheDetails": [
+      {
+        "host": "werkenbijdefensie.nl",
+        "hits": 1,
+        "dets": [
+          "Google Analytics",
+          "Google Analytics",
+          "Google Tag Manager",
+          "Google Tag Manager",
+          "Google Analytics",
+          "Google Tag Manager",
+          "Sentry"
+        ]
+      },
+      {
+        "host": "www.wappalyzer.com",
+        "hits": 1,
+        "dets": [
+          "Google Tag Manager"
+        ]
+      }
+    ],
+    "detections": [
+      {
+        "name": "Sentry",
+        "severity": "ernstig",
+        "category": "error-tracking",
+        "jurisdiction": "US"
+      },
+      {
+        "name": "Google Tag Manager",
+        "severity": "ernstig",
+        "category": "platform",
+        "jurisdiction": "US"
+      },
+      {
+        "name": "Google Analytics",
+        "severity": "kritiek",
+        "category": "analytics",
+        "jurisdiction": "US"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "site": "https://nu.nl",
+    "expected": "redirect-pagina",
+    "ok": true,
+    "cacheKeys": [
+      "myprivacy.dpgmedia.nl",
+      "werkenbijdefensie.nl",
+      "www.wappalyzer.com"
+    ],
+    "cacheEntry": null,
+    "allCacheDetails": [
+      {
+        "host": "myprivacy.dpgmedia.nl",
+        "hits": 1,
+        "dets": [
+          "Akamai",
+          "Akamai",
+          "Google Tag Manager",
+          "Google Tag Manager"
+        ]
+      },
+      {
+        "host": "werkenbijdefensie.nl",
+        "hits": 1,
+        "dets": [
+          "Google Analytics",
+          "Google Analytics",
+          "Google Tag Manager",
+          "Google Tag Manager",
+          "Google Analytics",
+          "Google Tag Manager",
+          "Sentry"
+        ]
+      },
+      {
+        "host": "www.wappalyzer.com",
+        "hits": 1,
+        "dets": [
+          "Google Tag Manager"
+        ]
+      }
+    ],
+    "detections": [
+      {
+        "name": "Google Tag Manager",
+        "severity": "ernstig",
+        "category": "platform",
+        "jurisdiction": "US"
+      },
+      {
+        "name": "Akamai",
+        "severity": "ernstig",
+        "category": "platform",
+        "jurisdiction": "US"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "site": "https://openkat.nl",
+    "expected": "groen/grijs",
+    "ok": true,
+    "cacheKeys": [
+      "myprivacy.dpgmedia.nl",
+      "werkenbijdefensie.nl",
+      "www.wappalyzer.com"
+    ],
+    "cacheEntry": null,
+    "allCacheDetails": [
+      {
+        "host": "myprivacy.dpgmedia.nl",
+        "hits": 1,
+        "dets": [
+          "Akamai",
+          "Akamai",
+          "Google Tag Manager",
+          "Google Tag Manager"
+        ]
+      },
+      {
+        "host": "werkenbijdefensie.nl",
+        "hits": 1,
+        "dets": [
+          "Google Analytics",
+          "Google Analytics",
+          "Google Tag Manager",
+          "Google Tag Manager",
+          "Google Analytics",
+          "Google Tag Manager",
+          "Sentry"
+        ]
+      },
+      {
+        "host": "www.wappalyzer.com",
+        "hits": 1,
+        "dets": [
+          "Google Tag Manager"
+        ]
+      }
+    ],
+    "detections": [],
+    "passed": true
+  }
+]

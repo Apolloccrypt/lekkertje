@@ -1,0 +1,34 @@
+{
+  "Matomo": {
+    "_lekkertje": {
+      "category": "analytics",
+      "cloud_act": false,
+      "jurisdiction": "EU",
+      "note": "Open-source self-host (default veilig); cloud-tier kan US-cloud raken.",
+      "severity_default": "let_op"
+    },
+    "cats": [
+      10
+    ],
+    "cookies": {
+      "_pk_cvar.*": "",
+      "_pk_id.*": "",
+      "_pk_ref.*": "",
+      "_pk_ses.*": "",
+      "mtm_consent": "",
+      "piwik_ignore": ""
+    },
+    "js": {
+      "Matomo": "",
+      "_paq": ""
+    },
+    "scriptSrc": [
+      "matomo\\.(org|cloud)/",
+      "/matomo\\.js",
+      "/piwik\\.js",
+      "^https?://(matomo|statistiek|piwik)\\.[a-z0-9.\\-]+/"
+    ],
+    "website": "https://matomo.org",
+    "xhr": "(/matomo\\.php|/piwik\\.php|matomo\\.cloud/.*\\.php)"
+  }
+}

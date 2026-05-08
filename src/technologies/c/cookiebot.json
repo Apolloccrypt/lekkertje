@@ -1,0 +1,27 @@
+{
+  "Cookiebot": {
+    "_lekkertje": {
+      "category": "consent-management",
+      "cloud_act": false,
+      "jurisdiction": "EU",
+      "note": "Cybot A/S, Denemarken; consent-tool zelf is meestal compliance-instrument.",
+      "severity_default": "let_op"
+    },
+    "cats": [
+      67
+    ],
+    "cookies": {
+      "CookieConsent": "",
+      "CookieConsentBulkTicket": ""
+    },
+    "js": {
+      "CookieConsentDialog": "",
+      "Cookiebot": ""
+    },
+    "scriptSrc": [
+      "consent\\.cookiebot\\.com/uc\\.js",
+      "consentcdn\\.cookiebot\\.com"
+    ],
+    "website": "https://www.cookiebot.com"
+  }
+}

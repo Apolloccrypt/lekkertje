@@ -1,0 +1,31 @@
+{
+  "Facebook Pixel": {
+    "_lekkertje": {
+      "category": "advertising",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Meta Pixel; gebundeld met Conversions API en advertentieprofielen.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      10,
+      36
+    ],
+    "cookies": {
+      "_fbc": "",
+      "_fbp": "",
+      "datr": "",
+      "fr": ""
+    },
+    "js": {
+      "_fbq": "",
+      "fbq": ""
+    },
+    "scriptSrc": [
+      "connect\\.facebook\\.net/.*/fbevents\\.js",
+      "connect\\.facebook\\.net/signals"
+    ],
+    "website": "https://www.facebook.com/business/tools/meta-pixel",
+    "xhr": "facebook\\.com/tr(/|\\?)"
+  }
+}

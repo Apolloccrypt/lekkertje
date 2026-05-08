@@ -1,0 +1,28 @@
+{
+  "Cloudflare": {
+    "_lekkertje": {
+      "category": "platform",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "CDN/WAF/DNS; zit in TLS-pad — TLS-terminatie meestal in US.",
+      "severity_default": "ernstig"
+    },
+    "cats": [
+      31
+    ],
+    "cookies": {
+      "__cf_bm": "",
+      "__cfduid": "",
+      "__cflb": "",
+      "__cfruid": "",
+      "cf_clearance": ""
+    },
+    "scriptSrc": [
+      "cdnjs\\.cloudflare\\.com",
+      "static\\.cloudflareinsights\\.com/beacon\\.min\\.js",
+      "challenges\\.cloudflare\\.com"
+    ],
+    "website": "https://www.cloudflare.com",
+    "xhr": "cloudflareinsights\\.com/cdn-cgi/rum"
+  }
+}

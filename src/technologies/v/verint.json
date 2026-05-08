@@ -1,0 +1,31 @@
+{
+  "Verint": {
+    "_lekkertje": {
+      "category": "platform",
+      "cloud_act": true,
+      "jurisdiction": "US",
+      "note": "Customer-experience suite (ForeSee); sessie- en interactie-data.",
+      "severity_default": "kritiek"
+    },
+    "cats": [
+      76
+    ],
+    "cookies": {
+      "fsr.a": "",
+      "fsr.r": "",
+      "fsr.s": ""
+    },
+    "js": {
+      "FSR": "",
+      "Verint": "",
+      "_fxb": ""
+    },
+    "scriptSrc": [
+      "foreseeresults\\.com",
+      "verint\\.com",
+      "\\.fs\\.verint\\.com"
+    ],
+    "website": "https://www.verint.com",
+    "xhr": "(foreseeresults\\.com|verint\\.com)/api"
+  }
+}
