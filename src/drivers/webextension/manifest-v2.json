@@ -1,11 +1,10 @@
 {
-  "name": "Wappalyzer - Technology profiler",
-  "short_name": "Wappalyzer",
-  "author": "Wappalyzer",
-  "homepage_url": "https://www.wappalyzer.com/",
-  "description": "Identify web technologies",
-  "version": "6.10.62",
-  "default_locale": "en",
+  "name": "Lekkertje",
+  "short_name": "Lekkertje",
+  "author": "Mick Beer",
+  "homepage_url": "https://mijnoverheid.us/",
+  "description": "Zie waar je data heen gaat — voor Nederlandse overheidssites en daarbuiten. Door mijnoverheid.us",
+  "version": "0.1.1",
   "manifest_version": 2,
   "icons": {
     "16": "images/icon_16.png",
@@ -30,7 +29,7 @@
       "512": "images/icon_512.png",
       "1024": "images/icon_1024.png"
     },
-    "default_title": "Wappalyzer",
+    "default_title": "Lekkertje",
     "default_popup": "html/popup.html"
   },
   "background": {
@@ -75,9 +74,6 @@
     "webNavigation",
     "http://*/*",
     "https://*/*"
-  ],
-  "optional_permissions": [
-    "downloads"
   ],
   "content_security_policy": "script-src 'self'; object-src 'self'"
 }

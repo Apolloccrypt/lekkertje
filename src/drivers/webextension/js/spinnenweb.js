@@ -181,6 +181,12 @@
           ? 'end'
           : 'middle'
 
+      // Truncate lange vendor-namen zodat ze in 350px viewBox passen.
+      // SVG-text heeft geen wrap; voor side-anchored labels (links/rechts)
+      // is ~12 chars de veilige grens. Volledige naam blijft in <title>.
+      const labelText =
+        v.vendor.length > 12 ? v.vendor.slice(0, 11).trimEnd() + '…' : v.vendor
+
       g.appendChild(
         el(
           'text',
@@ -192,7 +198,7 @@
             'font-size': '11',
             fill: '#222',
           },
-          v.vendor
+          labelText
         )
       )
 

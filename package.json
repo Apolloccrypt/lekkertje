@@ -1,7 +1,7 @@
 {
   "name": "lekkertje",
-  "version": "0.1.0",
-  "description": "Zie waar je data heen gaat — voor Nederlandse overheidssites en daarbuiten. Door mijnoverheid.us",
+  "version": "0.1.1",
+  "description": "Zie waar je data heen gaat \u2014 voor Nederlandse overheidssites en daarbuiten. Door mijnoverheid.us",
   "license": "GPL-3.0-only",
   "homepage": "https://mijnoverheid.us/",
   "dependencies": {

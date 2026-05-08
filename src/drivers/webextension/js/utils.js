@@ -56,7 +56,7 @@ const Utils = {
       }
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error('wappalyzer | utils |', error)
+      console.error('lekkertje | utils |', error)
     }
 
     return defaultValue
@@ -74,7 +74,7 @@ const Utils = {
       })
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error('wappalyzer | utils |', error)
+      console.error('lekkertje | utils |', error)
     }
   },
 

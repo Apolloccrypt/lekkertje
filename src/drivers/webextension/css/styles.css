@@ -1289,3 +1289,95 @@ body.lk-popup {
 .lk-tip:hover,
 .lk-dossier:hover { background: #a30000; }
 .lk-dossier { font-size: 12px; }
+
+/* === Lekkertje options-page === */
+body.lk-options-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: var(--lk-tekst);
+  width: auto;
+  height: auto;
+  display: block;
+  font-size: 14px;
+}
+.lk-options-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 22px 28px;
+  background: var(--lk-licht);
+  border-bottom: 1px solid var(--lk-rand);
+}
+.lk-options-header .lk-brand { font-size: 22px; }
+.lk-subbrand {
+  font-size: 13px;
+  color: var(--lk-zacht);
+  margin-top: 2px;
+}
+.lk-options-section {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 28px;
+}
+.lk-options-section h2 {
+  font-family: Charter, Georgia, serif;
+  font-size: 18px;
+  margin: 0 0 14px;
+  color: var(--lk-rood);
+}
+.lk-options-row {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--lk-rand);
+  cursor: pointer;
+}
+.lk-options-row:last-child { border-bottom: 0; }
+.lk-options-checkbox {
+  margin-top: 2px;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--lk-rood);
+}
+.lk-options-row strong {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.lk-options-row em {
+  display: block;
+  font-style: normal;
+  font-size: 13px;
+  color: var(--lk-zacht);
+}
+.lk-options-button {
+  font: inherit;
+  background: var(--lk-rood);
+  color: #fff;
+  border: 0;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.lk-options-button:hover { background: #a30000; }
+.lk-options-status {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--lk-zacht);
+}
+.lk-options-status[data-tone="ok"] { color: #2d6a3a; }
+.lk-options-status[data-tone="error"] { color: var(--lk-rood); }
+.lk-options-footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 28px 32px;
+  font-size: 12px;
+  color: var(--lk-zacht);
+  border-top: 1px solid var(--lk-rand);
+}
+.lk-options-footer p { margin: 4px 0; }
+.lk-options-footer a { color: var(--lk-rood); }

@@ -2,80 +2,58 @@
 /* eslint-env browser */
 /* globals Utils, chrome */
 
-const { agent, i18n, getOption, setOption } = Utils
+/* options.js — Lekkertje minimal options-page.
+   Twee checkboxes (badge, showCached) + Cache-leegmaken-knop. Geen
+   telemetry, geen api-keys, geen Wappalyzer-Plus-features. */
 
-const Options = {
-  /**
-   * Initialise options
-   */
-  async init() {
-    const termsAccepted =
-      agent === 'chrome' || (await getOption('termsAccepted', false))
+const { getOption, setOption } = Utils
 
-    ;[
-      ['upgradeMessage', true],
-      ['dynamicIcon', false],
-      ['badge', true],
-      ['tracking', true],
-      ['showCached', true],
-      ['apiKey', ''],
-    ].map(async ([option, defaultValue]) => {
-      const el = document
-        .querySelector(
-          `[data-i18n="option${
-            option.charAt(0).toUpperCase() + option.slice(1)
-          }"]`
-        )
-        .parentNode.querySelector('input')
+const OPTIONS = [
+  ['badge', true],
+  ['showCached', true],
+]
 
-      if (el.type === 'checkbox') {
-        el.checked =
-          !!(await getOption(option, defaultValue)) &&
-          (option !== 'tracking' || termsAccepted)
+async function init() {
+  for (const [name, defaultValue] of OPTIONS) {
+    const el = document.querySelector(`[data-option="${name}"]`)
+    if (!el) continue
+    el.checked = !!(await getOption(name, defaultValue))
+    el.addEventListener('change', async () => {
+      await setOption(name, !!el.checked)
+    })
+  }
 
-        el.addEventListener('click', async () => {
-          await setOption(option, !!el.checked)
+  const clearBtn = document.querySelector('[data-action="clearCache"]')
+  const status = document.getElementById('lk-options-status')
+  if (clearBtn) {
+    clearBtn.addEventListener('click', async () => {
+      try {
+        await new Promise((resolve, reject) => {
+          chrome.runtime.sendMessage(
+            { source: 'options.js', func: 'clearCache', args: [] },
+            (response) => {
+              const err = chrome.runtime && chrome.runtime.lastError
+              if (err) return reject(new Error(err.message || String(err)))
+              resolve(response)
+            }
+          )
         })
-      } else if (el.type === 'password') {
-        el.value = await getOption(option, defaultValue)
+        status.textContent = 'Cache geleegd.'
+        status.dataset.tone = 'ok'
+      } catch (e) {
+        status.textContent = 'Mislukt: ' + (e.message || String(e))
+        status.dataset.tone = 'error'
       }
+      setTimeout(() => {
+        status.textContent = ''
+        delete status.dataset.tone
+      }, 4000)
     })
-
-    document
-      .querySelector('[data-i18n="optionApiKey"]')
-      .parentNode.querySelector('input')
-      .addEventListener(
-        'input',
-        async (event) => await setOption('apiKey', event.target.value)
-      )
-
-    document
-      .querySelector('.options__cache')
-      .addEventListener('click', () => Options.driver('clearCache'))
-
-    i18n()
-  },
-
-  driver(func, args, callback) {
-    return new Promise((resolve, reject) => {
-      chrome.runtime.sendMessage(
-        {
-          source: 'content.js',
-          func,
-          args: args ? (Array.isArray(args) ? args : [args]) : [],
-        },
-        (response) => {
-          chrome.runtime.lastError
-            ? reject(new Error(chrome.runtime.lastError.message))
-            : resolve(response)
-        }
-      )
-    })
-  },
+  }
 }
 
-if (/complete|interactive|loaded/.test(document.readyState)) {
-  Options.init()
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init)
 } else {
-  document.addEventListener('DOMContentLoaded', Options.init)
+  init()
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Lekkertje — spinnenweb-tracker-detector">
+  <title>Lekkertje</title>
+  <!-- Spinnenweb: rode buitencirkel + 4 spaken + centrum-node.
+       Visueel motief: tracker-detectie als spider-web, één zichtpunt
+       in het midden, vendor-spaken naar buiten. -->
+  <defs>
+    <style>
+      .web-line { fill: none; stroke: #cc0000; stroke-linecap: round; }
+      .web-thin { stroke-width: 4; opacity: 0.65; }
+      .web-thick { stroke-width: 14; }
+      .center-dot { fill: #cc0000; }
+      .bg { fill: #ffffff; }
+    </style>
+  </defs>
+
+  <!-- Optional white background — makes 16/19px icons readable on dark themes. -->
+  <circle cx="128" cy="128" r="120" class="bg"/>
+
+  <!-- Outer ring -->
+  <circle cx="128" cy="128" r="100" class="web-line web-thick"/>
+
+  <!-- Inner concentric ring (subtiele context, alleen voor grotere sizes) -->
+  <circle cx="128" cy="128" r="60" class="web-line web-thin"/>
+
+  <!-- Crosshatch spaken -->
+  <line x1="128" y1="20"  x2="128" y2="236" class="web-line web-thin"/>
+  <line x1="20"  y1="128" x2="236" y2="128" class="web-line web-thin"/>
+  <line x1="51"  y1="51"  x2="205" y2="205" class="web-line web-thin"/>
+  <line x1="205" y1="51"  x2="51"  y2="205" class="web-line web-thin"/>
+
+  <!-- Centrum-node -->
+  <circle cx="128" cy="128" r="22" class="center-dot"/>
+</svg>

@@ -1,55 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title data-i18n="options"></title>
+    <title>Lekkertje · instellingen</title>
 
     <link rel="stylesheet" href="../css/styles.css">
 
     <script src="../js/utils.js"></script>
     <script src="../js/options.js"></script>
   </head>
-  <body class="body__options">
-    <div class="options">
-      <button data-i18n="clearCache" class="options__cache">&nbsp;</button>
+  <body class="lk-options-page">
+    <header class="lk-options-header">
+      <div class="lk-logo" aria-hidden="true">
+        <svg width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="none" stroke="#cc0000" stroke-width="2"/><circle cx="12" cy="12" r="2.5" fill="#cc0000"/><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19" stroke="#cc0000" stroke-width="0.6" fill="none"/></svg>
+      </div>
+      <div>
+        <div class="lk-brand">Lekkertje</div>
+        <div class="lk-subbrand">Live tracker-detectie · self-contained · geen telemetry</div>
+      </div>
+    </header>
 
-      <label class="options__label">
-        <input class="options__checkbox" type="checkbox">
+    <section class="lk-options-section">
+      <h2>Instellingen</h2>
 
-        <span data-i18n="optionUpgradeMessage">&nbsp;</span>
+      <label class="lk-options-row">
+        <input class="lk-options-checkbox" type="checkbox" data-option="badge">
+        <span>
+          <strong>Toon aantal trackers op icoon</strong>
+          <em>Een kleine teller op het Lekkertje-icoon laat zien hoeveel vendors op de huidige tab gedetecteerd zijn.</em>
+        </span>
       </label>
 
-      <label class="options__label">
-        <input class="options__checkbox" type="checkbox">
-
-        <span data-i18n="optionDynamicIcon">&nbsp;</span>
+      <label class="lk-options-row">
+        <input class="lk-options-checkbox" type="checkbox" data-option="showCached">
+        <span>
+          <strong>Cached resultaten tonen</strong>
+          <em>Toon detecties uit de cache zelfs als de huidige pagina nog niet volledig geanalyseerd is.</em>
+        </span>
       </label>
+    </section>
 
-      <label class="options__label">
-        <input class="options__checkbox" type="checkbox">
+    <section class="lk-options-section">
+      <h2>Onderhoud</h2>
+      <button class="lk-options-button" data-action="clearCache" type="button">Cache leegmaken</button>
+      <p class="lk-options-status" id="lk-options-status" aria-live="polite"></p>
+    </section>
 
-        <span data-i18n="optionBadge">&nbsp;</span>
-      </label>
-
-      <label class="options__label">
-        <input class="options__checkbox" type="checkbox">
-
-        <span data-i18n="optionShowCached">Show cached results</span>
-      </label>
-
-      <label class="options__label">
-        <input class="options__checkbox" type="checkbox">
-
-        <span data-i18n="optionTracking">&nbsp;</span>
-      </label>
-
-      <label class="options__label">
-        <span data-i18n="optionApiKey">&nbsp;</span>
-
-        <input class="options__input" type="password">
-      </label>
-    </div>
+    <footer class="lk-options-footer">
+      <p>
+        Lekkertje is een fork van <a href="https://github.com/AliasIO/wappalyzer" target="_blank" rel="noopener">Wappalyzer</a>
+        (GPL-3.0). Source: <a href="https://github.com/Apolloccrypt/lekkertje" target="_blank" rel="noopener">github.com/Apolloccrypt/lekkertje</a>.
+      </p>
+      <p>Begeleidend register: <a href="https://mijnoverheid.us/" target="_blank" rel="noopener">mijnoverheid.us</a>.</p>
+    </footer>
   </body>
 </html>
