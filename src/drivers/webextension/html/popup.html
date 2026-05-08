@@ -24,17 +24,15 @@
     </div>
   </section>
 
-  <section class="lk-web-wrap">
-    <svg id="lk-web" width="350" height="140" viewBox="0 0 350 140" role="img" aria-label="Spinnenweb van vendor-koppelingen"></svg>
-    <div class="lk-empty" id="lk-empty" style="display:none">Geen trackers gedetecteerd op deze pagina.</div>
+  <section class="lk-flow" id="lk-flow" hidden>
+    <div class="lk-flow-title">Data van deze pagina gaat naar</div>
+    <div class="lk-flow-bar" id="lk-flow-bar" role="img" aria-label="Verdeling per jurisdictie"></div>
+    <div class="lk-flow-legend" id="lk-flow-legend"></div>
   </section>
 
-  <section class="lk-vendors">
-    <button class="lk-toggle" id="lk-toggle" aria-expanded="true" aria-controls="lk-vendor-list">
-      <span class="lk-chev">▾</span> Vendors op deze pagina
-    </button>
-    <ul class="lk-vendor-list" id="lk-vendor-list"></ul>
-  </section>
+  <section class="lk-categories" id="lk-categories"></section>
+
+  <div class="lk-empty" id="lk-empty" style="display:none">Geen trackers gedetecteerd op deze pagina.</div>
 
   <section class="lk-legend-wrap">
     <button class="lk-toggle lk-legend-toggle" id="lk-legend-toggle" aria-expanded="false" aria-controls="lk-legend">
@@ -46,19 +44,23 @@
         <span><strong>Schoon</strong> — geen trackers gedetecteerd.</span>
       </div>
       <div class="lk-legend-row" data-level="let_op">
+        <span class="lk-stars-static" data-rating="4"></span>
+        <span><strong>Let op</strong> — EU-vendors, geen CLOUD Act-bereik.</span>
+      </div>
+      <div class="lk-legend-row" data-level="let_op">
         <span class="lk-stars-static" data-rating="3"></span>
-        <span><strong>Let op</strong> — vendors aanwezig, maar EU-jurisdictie of geen CLOUD Act.</span>
+        <span><strong>Verhoogd</strong> — vendors aanwezig, mogelijk US-cloud.</span>
       </div>
       <div class="lk-legend-row" data-level="ernstig">
         <span class="lk-stars-static" data-rating="2"></span>
-        <span><strong>Ernstig</strong> — bekende US-vendors of EU-tools op US-cloud.</span>
+        <span><strong>Ernstig</strong> — bekende US-vendors, CLOUD Act van toepassing.</span>
       </div>
       <div class="lk-legend-row" data-level="kritiek">
         <span class="lk-stars-static" data-rating="1"></span>
-        <span><strong>Kritiek</strong> — bewezen tracking, data-stroom naar US onder CLOUD Act.</span>
+        <span><strong>Kritiek</strong> — bewezen tracking, data-stroom naar US.</span>
       </div>
       <p class="lk-legend-note">
-        🇺🇸 = US-jurisdictie. ⚠ = data valt onder de Amerikaanse CLOUD Act.
+        🇺🇸 = US-jurisdictie · 🇪🇺 = EU · ⚠ = data valt onder de Amerikaanse CLOUD Act.
       </p>
     </div>
   </section>
